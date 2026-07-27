@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Skill" format=3 uid="uid://cpco7stmrdk3a"]
+
+[ext_resource type="Script" uid="uid://c0ghrb1w47aqo" path="res://skill_data.gd" id="1_ol147"]
+
+[resource]
+script = ExtResource("1_ol147")
+metadata/_custom_type_script = "uid://c0ghrb1w47aqo"
