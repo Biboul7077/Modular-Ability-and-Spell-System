@@ -5,3 +5,6 @@ extends Resource
 @warning_ignore("unused_parameter")
 func execute() -> void:
 	pass
+
+func get_summary() -> String:
+	return get_class()

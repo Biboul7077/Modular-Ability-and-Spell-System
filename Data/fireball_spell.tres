@@ -1,7 +1,25 @@
 [gd_resource type="Resource" script_class="Skill" format=3 uid="uid://cpco7stmrdk3a"]
 
-[ext_resource type="Script" uid="uid://c0ghrb1w47aqo" path="res://skill_data.gd" id="1_ol147"]
+[ext_resource type="Script" uid="uid://cejgibhprghtx" path="res://Scripts/effect_execution.gd" id="1_oc4mk"]
+[ext_resource type="Script" uid="uid://c0ghrb1w47aqo" path="res://Scripts/skill_data.gd" id="1_ol147"]
+[ext_resource type="Script" uid="uid://bmqhyp2wncg1u" path="res://Scripts/Effects/damage_effect.gd" id="2_7k2rh"]
+
+[sub_resource type="Resource" id="Resource_w5ait"]
+script = ExtResource("2_7k2rh")
+base = 6
+variance = 3.5
+metadata/_custom_type_script = "uid://bmqhyp2wncg1u"
+
+[sub_resource type="Resource" id="Resource_r5ctt"]
+script = ExtResource("1_oc4mk")
+effect = SubResource("Resource_w5ait")
+target_resolver = null
+origin_resolver = null
+metadata/_custom_type_script = "uid://cejgibhprghtx"
 
 [resource]
 script = ExtResource("1_ol147")
+name = "Fireball"
+description = "it's litteraly just a fireball "
+execution = Array[ExtResource("1_oc4mk")]([SubResource("Resource_r5ctt")])
 metadata/_custom_type_script = "uid://c0ghrb1w47aqo"

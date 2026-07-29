@@ -1,0 +1,2 @@
+class_name HealthComponent
+extends Area2D

@@ -11,4 +11,4 @@ extends Resource
 @export var channel_tick_interval: float = 0.0
 
 @export_group("Active Zone")
-@export var execution: Array
+@export var execution: Array[EffectExecution]
