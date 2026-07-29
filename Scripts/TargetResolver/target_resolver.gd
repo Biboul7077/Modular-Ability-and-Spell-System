@@ -8,7 +8,7 @@ enum Source {TARGET, TRIGGERER}
 func check(context: GameContext) -> ResolverResult:
 	var node = get_source(context)
 	if node == null:
-		return ResolverResult.error("ContextResolver: source %s is null" % Source.keys()[source])
+		return null
 	return ResolverResult.new()
 
 func get_source(context: GameContext) -> Node:
