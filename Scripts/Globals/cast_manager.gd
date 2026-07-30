@@ -1,14 +1,16 @@
 extends Node
+const FIREBALL = preload("uid://cqt2veorap65e")
 
-const FIREBALL_SPELL = preload("uid://cpco7stmrdk3a")
-
-var spell_data: Skill
-var spell_dict ={
-	"fireball": FIREBALL_SPELL
+var current_spell: Skill = null
+var current_effect: DamageEffect
+var spell_list: Dictionary = {
+	&"fireball" : FIREBALL
 }
 
-func cast(spell: String) -> void:
-	spell_data = spell_dict.get(spell)
-	if spell_data != null:
-		print(spell_data.name)
-		spell_data.execution[0].effect.execute()
+
+func cast(skill_name: StringName) -> void:
+	current_spell = spell_list.get(skill_name)
+	print(current_spell.name)
+	for i in current_spell:
+		if i as EffectMapComponentData:
+			current_effect = i[0][0]

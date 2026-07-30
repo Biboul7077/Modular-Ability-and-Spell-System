@@ -11,14 +11,13 @@ config_version=5
 [application]
 
 config/name="TEMPLATE - Modular Ability and Spell System"
-run/main_scene="uid://dtyv31ohh14e4"
+run/main_scene="uid://c5m5i0oxomrn5"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 CastManager="*uid://du8vhj7j2etnn"
-WorldManager="*uid://l1jms4afpfoh"
 
 [file_customization]
 
