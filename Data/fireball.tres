@@ -5,6 +5,8 @@
 [ext_resource type="Script" uid="uid://jdepkcaplkps" path="res://Scripts/Effects/effect_data.gd" id="2_dlni8"]
 [ext_resource type="Script" uid="uid://cx86c7ybydq58" path="res://Scripts/ComponentData/effect_map_component_data.gd" id="2_pwwub"]
 [ext_resource type="Script" uid="uid://bmqhyp2wncg1u" path="res://Scripts/Effects/damage_effect.gd" id="3_nnej4"]
+[ext_resource type="Script" uid="uid://bqwrc2thqqhy6" path="res://Scripts/ComponentData/timer_component_data.gd" id="5_uhbl3"]
+[ext_resource type="Script" uid="uid://cx2h85o8ruhp2" path="res://Scripts/timer_config.gd" id="6_4k1q7"]
 
 [sub_resource type="Resource" id="Resource_uhbl3"]
 script = ExtResource("3_nnej4")
@@ -17,9 +19,13 @@ script = ExtResource("2_pwwub")
 on_start = Array[ExtResource("2_dlni8")]([SubResource("Resource_uhbl3")])
 metadata/_custom_type_script = "uid://cx86c7ybydq58"
 
+[sub_resource type="Resource" id="Resource_5o1l2"]
+script = ExtResource("5_uhbl3")
+metadata/_custom_type_script = "uid://bqwrc2thqqhy6"
+
 [resource]
 script = ExtResource("1_a3hhg")
 name = "Fireball"
 description = "just a good old fireball"
-execution = Array[ExtResource("1_r0137")]([SubResource("Resource_dlni8")])
+execution = Array[ExtResource("1_r0137")]([SubResource("Resource_dlni8"), SubResource("Resource_5o1l2")])
 metadata/_custom_type_script = "uid://c0ghrb1w47aqo"
